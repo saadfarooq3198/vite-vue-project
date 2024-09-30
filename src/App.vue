@@ -1,5 +1,4 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 
 const blogs = [
   {
@@ -73,10 +72,10 @@ const blogs = [
           <div class="two-column-section">
               <p>Tech Blog</p>
               <div class="blog-posts">
-                  <div v-for="value in blogs">
-    <p class="blog-heading">{{value['heading']}}</p>
-    <p class="blog-text">{{value['text']}}</p>
-    <p class="blog-date">{{value['date']}}</p>
+                  <div v-for="blog in blogs">
+    <p class="blog-heading">{{blog.heading}}</p>
+    <p class="blog-text">{{blog.text}}</p>
+    <p class="blog-date">{{blog.date}}</p>
     </div>
               </div>
           </div>
@@ -89,9 +88,9 @@ const blogs = [
               <p>Speaking Events</p>
               <div class="events-card">
                 <div v-for="event in speaking">
-                  <p class="event-title">{{event['title']}}</p>
-                  <p class="event-location">{{event['location']}}</p>
-                  <p class="event-date">{{event['date']}}</p>
+                  <p class="event-title">{{event.title}}</p>
+                  <p class="event-location">{{event.location}}</p>
+                  <p class="event-date">{{event.date}}</p>
                   </div>
               </div>
           </div>
